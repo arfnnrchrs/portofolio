@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arfian Nurcharisi | Portfolio</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#000080',
+                            darkbg: '#070b19',
+                            card: '#111827',
+                            beige: '#F5F5DC',
+                            beigeHover: '#e5e5cc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-darkbg text-gray-300 font-sans antialiased selection:bg-brand-beige selection:text-brand-darkbg">
+
+    <!-- Navigation (Mobile Responsive) -->
+    <nav class="fixed w-full bg-brand-darkbg/90 backdrop-blur-md border-b border-gray-800 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="#" class="font-bold text-2xl tracking-wider text-brand-beige hover:text-white transform transition duration-300 hover:scale-105">AN.</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-400 hover:text-brand-beige transform transition duration-300 hover:-translate-y-0.5">About</a>
+                    <a href="#experience" class="text-sm font-medium text-gray-400 hover:text-brand-beige transform transition duration-300 hover:-translate-y-0.5">Experience & Projects</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-400 hover:text-brand-beige transform transition duration-300 hover:-translate-y-0.5">Skills</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-brand-beige transform transition duration-300 hover:-translate-y-0.5">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-brand-beige focus:outline-none transform transition duration-300 active:scale-90">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkbg border-b border-gray-800 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-3 shadow-lg">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-400 hover:text-brand-darkbg hover:bg-brand-beige rounded-lg transition-colors">About</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-400 hover:text-brand-darkbg hover:bg-brand-beige rounded-lg transition-colors">Experience & Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-400 hover:text-brand-darkbg hover:bg-brand-beige rounded-lg transition-colors">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-400 hover:text-brand-darkbg hover:bg-brand-beige rounded-lg transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 min-h-screen flex items-center">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-sm md:text-base font-semibold tracking-widest text-brand-beige uppercase mb-6 animate-pulse">Let Life Be Beautiful</p>
+            <h1 class="font-bold text-5xl md:text-7xl lg:text-8xl text-white mb-8">
+                Hi, I'm <span class="text-brand-beige">Arfian Nurcharisi</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                A creative and detail-oriented Information Technology undergraduate with a strong passion for graphic design, digital storytelling, and visual media production.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="inline-block bg-brand-beige text-brand-darkbg px-8 py-4 rounded-lg font-semibold transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95 hover:bg-brand-beigeHover shadow-[0_0_15px_rgba(245,245,220,0.3)] hover:shadow-[0_0_25px_rgba(245,245,220,0.5)]">
+                    Let's Collaborate
+                </a>
+                <a href="#experience" class="inline-block border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95 hover:border-brand-beige hover:text-brand-beige hover:shadow-lg">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-brand-card px-4 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-bold text-3xl md:text-4xl text-brand-beige mb-10">About Me</h2>
+            <div class="space-y-6 text-lg text-gray-400 leading-relaxed text-justify md:text-center transform transition duration-500 hover:text-gray-300">
+                <p>
+                    I have proven experience in coordinating media strategies, producing high-quality multimedia content, and managing digital campaigns for academic organizations and non-profit institutions.
+                </p>
+                <p>
+                    I am adept at leveraging design and editing software to transform creative concepts into engaging visual identities. I am eager to apply technical problem-solving skills and creative expertise to a dynamic Creative Designer role.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="py-24 px-4 bg-brand-darkbg">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-bold text-3xl md:text-4xl text-brand-beige mb-16 text-center">Experience & Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-brand-card border-l-4 border-transparent hover:border-brand-beige p-8 rounded-xl transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-navy/20 cursor-pointer group">
+                    <h3 class="font-bold text-xl text-white mb-2 group-hover:text-brand-beige transition-colors duration-300">Coordinator of Media & Information</h3>
+                    <p class="text-gray-500 group-hover:text-gray-400 text-sm font-medium mb-6 transition-colors duration-300">HMPS Teknologi Informasi, UIN Salatiga | Feb 2026 – Present</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 text-sm">
+                        <li>Elevated the student association’s visual identity and digital presence to increase student engagement.</li>
+                        <li>Spearheaded the design of structured social media content using Canva and CapCut.</li>
+                        <li>Streamlined the organizational content publication process, resulting in a consistent and timely upload schedule.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card border-l-4 border-transparent hover:border-brand-beige p-8 rounded-xl transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-navy/20 cursor-pointer group">
+                    <h3 class="font-bold text-xl text-white mb-2 group-hover:text-brand-beige transition-colors duration-300">Media Team & Fund Raising</h3>
+                    <p class="text-gray-500 group-hover:text-gray-400 text-sm font-medium mb-6 transition-colors duration-300">Lazismu Kota Salatiga | Jan 2026 – Present</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 text-sm">
+                        <li>Boosted donor awareness and engagement for charity campaigns.</li>
+                        <li>Produced and edited compelling promotional videos and graphic assets using CapCut and Canva.</li>
+                        <li>Delivered consistent brand messaging across digital platforms, ensuring alignment with philanthropic goals.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card border-l-4 border-transparent hover:border-brand-beige p-8 rounded-xl transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-navy/20 cursor-pointer group">
+                    <h3 class="font-bold text-xl text-white mb-2 group-hover:text-brand-beige transition-colors duration-300">Freelance Photo & Videographer</h3>
+                    <p class="text-gray-500 group-hover:text-gray-400 text-sm font-medium mb-6 transition-colors duration-300">Self-Employed | Aug 2026 – Present</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 text-sm">
+                        <li>Provided high-quality tailored multimedia projects for various clients, managing end-to-end services from shooting to post-production.</li>
+                        <li>Enhanced the visual appeal of client deliverables using Adobe Lightroom and CapCut.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-card border-l-4 border-transparent hover:border-brand-beige p-8 rounded-xl transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-navy/20 cursor-pointer group">
+                    <h3 class="font-bold text-xl text-white mb-2 group-hover:text-brand-beige transition-colors duration-300">Documentation & Decoration</h3>
+                    <p class="text-gray-500 group-hover:text-gray-400 text-sm font-medium mb-6 transition-colors duration-300">PBAK Faculty of Science & Technology | Aug 2026</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 text-sm">
+                        <li>Preserved comprehensive visual records of the faculty orientation event utilized for the university's official media archive.</li>
+                        <li>Designed and prepared creative physical properties and digital assets accommodating hundreds of new incoming students.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-brand-card border-y border-gray-800 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="font-bold text-3xl md:text-4xl text-brand-beige mb-12">My Skills & Tools</h2>
+            
+            <div class="mb-10">
+                <h3 class="text-sm tracking-widest text-gray-500 uppercase font-semibold mb-6">Hard Skills & Tools</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Graphic Design</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Video Editing</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Digital Photography</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Color Grading</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Visual Storytelling</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Canva & CapCut</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Adobe Lightroom</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">UI/UX Concepts</span>
+                    <span class="bg-brand-darkbg border border-gray-700 text-brand-beige px-6 py-3 rounded-full font-medium text-sm transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:border-brand-beige hover:shadow-[0_0_10px_rgba(245,245,220,0.2)] cursor-default">Laravel, HTML/CSS</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-sm tracking-widest text-gray-500 uppercase font-semibold mb-6">Soft Skills</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-transparent border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:text-gray-200 cursor-default">Creative Problem Solving</span>
+                    <span class="bg-transparent border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:text-gray-200 cursor-default">Team Leadership</span>
+                    <span class="bg-transparent border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:text-gray-200 cursor-default">Cross-functional Collaboration</span>
+                    <span class="bg-transparent border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:text-gray-200 cursor-default">Time Management</span>
+                    <span class="bg-transparent border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm font-medium transform transition-all duration-300 hover:scale-105 hover:text-gray-200 cursor-default">Attention to Detail</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 bg-brand-darkbg relative overflow-hidden">
+        <!-- Decorative element -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-navy rounded-full blur-[120px] opacity-20 z-0 pointer-events-none"></div>
+        
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="font-bold text-3xl md:text-4xl text-brand-beige mb-6">Get In Touch</h2>
+            <p class="text-gray-400 mb-12 text-lg">Interested in working together or have a question? Feel free to reach out!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-xl mx-auto">
+                
+                <a href="mailto:arfnnrchrs22@gmail.com" class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800 transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-brand-beige hover:shadow-lg hover:shadow-brand-navy/30 group">
+                    <div class="p-3 bg-brand-darkbg rounded-lg text-brand-beige group-hover:bg-brand-beige group-hover:text-brand-darkbg transition-colors duration-300">
+                        <svg class="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Email</p>
+                        <p class="text-gray-300 font-medium group-hover:text-white transition-colors duration-300">arfnnrchrs22@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/arfian-nurcharisi" target="_blank" class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800 transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-brand-beige hover:shadow-lg hover:shadow-brand-navy/30 group">
+                    <div class="p-3 bg-brand-darkbg rounded-lg text-brand-beige group-hover:bg-brand-beige group-hover:text-brand-darkbg transition-colors duration-300">
+                        <svg class="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">LinkedIn</p>
+                        <p class="text-gray-300 font-medium group-hover:text-white transition-colors duration-300">Arfian Nurcharisi</p>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800 transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-brand-beige hover:shadow-lg hover:shadow-brand-navy/30 group cursor-default">
+                    <div class="p-3 bg-brand-darkbg rounded-lg text-brand-beige group-hover:bg-brand-beige group-hover:text-brand-darkbg transition-colors duration-300">
+                        <svg class="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Location</p>
+                        <p class="text-gray-300 font-medium group-hover:text-white transition-colors duration-300">Salatiga, Indonesia</p>
+                    </div>
+                </div>
+
+                <!-- Tombol Direct WhatsApp -->
+                <a href="https://wa.me/6285741161303" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800 transform transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-brand-beige hover:shadow-lg hover:shadow-brand-navy/30 group">
+                    <div class="p-3 bg-brand-darkbg rounded-lg text-brand-beige group-hover:bg-brand-beige group-hover:text-brand-darkbg transition-colors duration-300">
+                        <svg class="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Phone / WhatsApp</p>
+                        <p class="text-gray-300 font-medium group-hover:text-white transition-colors duration-300">+62 857 4116 1303</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#030612] text-gray-600 py-8 text-center text-sm font-medium border-t border-gray-900">
+        <p>&copy; 2026 Arfian Nurcharisi. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Menu Mobile -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
